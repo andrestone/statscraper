@@ -5,7 +5,7 @@ This script retrieves JSON data containing all available QTV hosts and tries to 
 ## Usage:
 
 ### Install:
-`pip3 -i requirements.txt`
+`pip3 install -r requirements.txt`
 
 ### Use:
 `python3 scrape.py`
