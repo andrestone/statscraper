@@ -38,8 +38,7 @@ for s in list_of_servers:
         sys.exit()
     else:
         print('Working on server ' + s + ' (' + (str)(scount) + '/' + (str)(
-            len(list_of_servers)) + ')' + ' - total downloaded ' + (str)(
-            numpy.ceil((total_bytes / (1024 * 1024)))) + ' MiB')
+            len(list_of_servers)) + ')')
     try:
         response = requests.get('http://' + s + ':28000/demos', timeout=5)
     except TimeoutError:
@@ -85,9 +84,9 @@ for t in list_of_urls:
     try:
         myfile = requests.get(url, timeout=5)
     except TimeoutError:
-        continue;
+        continue
     except socket.error:
-        continue;
+        continue
     open(url.split('/')[-1], 'wb').write(myfile.content)
     # fname = wget.download(url, bar=None)
     print(os.getcwd() + '/' + url.split('/')[-1] + ' (' + (str)(list_of_urls.index(t)) + '/' + (str)(len(list_of_urls))
