@@ -89,8 +89,8 @@ for t in list_of_urls:
         continue
     open(url.split('/')[-1], 'wb').write(myfile.content)
     # fname = wget.download(url, bar=None)
-    print(os.getcwd() + '/' + url.split('/')[-1] + ' (' + (str)(list_of_urls.index(t)) + '/' + (str)(len(list_of_urls))
-          + ') ' + '-> Working on ' + s + ' (' + (str)(list_of_servers.index(s)) + '/' + (str)(len(list_of_servers)) + ')'
+    print(os.getcwd() + '/' + url.split('/')[-1] + ' (' + (str)(list_of_urls.index(t)+1) + '/' + (str)(len(list_of_urls))
+          + ') ' + '-> Working on ' + s + ' (' + (str)(list_of_servers.index(s)+1) + '/' + (str)(len(list_of_servers)) + ')'
           )
     time.sleep(0.5)
     os.chdir(origpath)
